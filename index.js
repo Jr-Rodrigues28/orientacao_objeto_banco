@@ -6,19 +6,24 @@ class Cliente{
 
 class contaCorrente{
     agencia;
-    saldo;
+
+    // #saldo = 0; é para privar
+    _saldo = 0;
 
     // Função de saque
     sacar(valor){
-        if(this.saldo >= valor){
-            this.saldo -= valor;
+        if(this._saldo >= valor){
+            this._saldo -= valor;
+            return valor;
         }
     }
 
     depositar(valor){
-        if (valor > 0) {
-            this.saldo += valor;
+        if (valor <= 0) {
+            return
         }
+
+        this._saldo += valor;
     }
 }
 
@@ -32,11 +37,15 @@ cliente2.nome = "Germano";
 cliente2.cpf = 88822233309;
 
 const contaCorrenteRodrigues = new contaCorrente();
-contaCorrenteRodrigues.saldo = 0; 
 contaCorrenteRodrigues.agencia = 1001;
 
 contaCorrenteRodrigues.depositar(100);
-contaCorrenteRodrigues.sacar(50);
+contaCorrenteRodrigues.depositar(100);
+contaCorrenteRodrigues.depositar(100);
+
+const valorSacado = contaCorrenteRodrigues.sacar(50);
+console.log(valorSacado);
+
 
 console.log(contaCorrenteRodrigues);
 //console.log(cliente1);  // node .index.js - pra chamar o cliente
