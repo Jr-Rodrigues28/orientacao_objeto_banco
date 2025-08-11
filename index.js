@@ -14,6 +14,12 @@ class contaCorrente{
             this.saldo -= valor;
         }
     }
+
+    depositar(valor){
+        if (valor > 0) {
+            this.saldo += valor;
+        }
+    }
 }
 
 // cada vez que dou um new estou criando um objeto
@@ -29,15 +35,9 @@ const contaCorrenteRodrigues = new contaCorrente();
 contaCorrenteRodrigues.saldo = 0; 
 contaCorrenteRodrigues.agencia = 1001;
 
-
-console.log(contaCorrenteRodrigues.saldo);
-contaCorrenteRodrigues.saldo = 100;
-console.log(contaCorrenteRodrigues.saldo);
+contaCorrenteRodrigues.depositar(100);
 contaCorrenteRodrigues.sacar(50);
 
-
-
-
-console.log(contaCorrenteRodrigues.saldo);
-console.log(cliente1);  // node .index.js - pra chamar o cliente
-console.log(cliente2);
+console.log(contaCorrenteRodrigues);
+//console.log(cliente1);  // node .index.js - pra chamar o cliente
+//console.log(cliente2);
