@@ -10,3 +10,10 @@ const cliente1Saldo = 0;
 const cliente1Agencia = 1001;
 
 ```
+
+```javascript
+let valorSacado = 200;
+if(contaCorrenteRodrigues.saldo >= valorSacado){
+    contaCorrenteRodrigues.saldo -= valorSacado;
+}
+```
