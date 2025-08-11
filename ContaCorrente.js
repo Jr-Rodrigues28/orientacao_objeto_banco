@@ -23,6 +23,8 @@ export class contaCorrente{
     transferir(valor, conta){
         const valorSacado = this.sacar(valor);
         conta.depositar(valorSacado);
+        //conta.cidade = "Bahia";  // Aqui consegue passar por ser referência, já que é um objeto a conta
+        //valor = 20;  // já aqui não pq é uma cópia, então não consigo alterar e por ser um tipo primitivo
     }
 }
 
