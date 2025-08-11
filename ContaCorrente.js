@@ -1,6 +1,6 @@
 export class contaCorrente{
     agencia;
-
+    cliente;
     // #saldo = 0; é para privar
     _saldo = 0;
 
@@ -18,6 +18,11 @@ export class contaCorrente{
         }
 
         this._saldo += valor;
+    }
+
+    transferir(valor, conta){
+        const valorSacado = this.sacar(valor);
+        conta.depositar(valorSacado);
     }
 }
 
