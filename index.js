@@ -1,31 +1,6 @@
-// é como se fosse o molde
-class Cliente{
-    nome;
-    cpf;
-}
+import { Cliente } from "./Cliente.js"; 
+import {contaCorrente} from "./ContaCorrente.js";
 
-class contaCorrente{
-    agencia;
-
-    // #saldo = 0; é para privar
-    _saldo = 0;
-
-    // Função de saque
-    sacar(valor){
-        if(this._saldo >= valor){
-            this._saldo -= valor;
-            return valor;
-        }
-    }
-
-    depositar(valor){
-        if (valor <= 0) {
-            return
-        }
-
-        this._saldo += valor;
-    }
-}
 
 // cada vez que dou um new estou criando um objeto
 const cliente1 = new Cliente(); // new é uma instância da minha classe molde

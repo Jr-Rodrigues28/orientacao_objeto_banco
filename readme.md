@@ -17,3 +17,9 @@ if(contaCorrenteRodrigues.saldo >= valorSacado){
     contaCorrenteRodrigues.saldo -= valorSacado;
 }
 ```
+
+
+
+// pra chamar o json:
+// npm init / nome do pacote - bytebank / description: Projeto de bytebank para seus clientes
+// ao final criar o "type": "module", abaixo do "license": "ISC",
