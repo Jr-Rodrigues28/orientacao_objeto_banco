@@ -8,6 +8,12 @@ class contaCorrente{
     agencia;
     saldo;
 
+    // Função de saque
+    sacar(valor){
+        if(this.saldo >= valor){
+            this.saldo -= valor;
+        }
+    }
 }
 
 // cada vez que dou um new estou criando um objeto
@@ -27,14 +33,11 @@ contaCorrenteRodrigues.agencia = 1001;
 console.log(contaCorrenteRodrigues.saldo);
 contaCorrenteRodrigues.saldo = 100;
 console.log(contaCorrenteRodrigues.saldo);
-let valorSacado = 200;
-if(contaCorrenteRodrigues.saldo >= valorSacado){
-    contaCorrenteRodrigues.saldo -= valorSacado;
-}
+contaCorrenteRodrigues.sacar(50);
+
 
 
 
 console.log(contaCorrenteRodrigues.saldo);
-
 console.log(cliente1);  // node .index.js - pra chamar o cliente
 console.log(cliente2);
