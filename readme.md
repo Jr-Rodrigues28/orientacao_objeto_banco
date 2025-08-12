@@ -50,6 +50,39 @@ Dessa forma, ao declararmos uma variável que armazena informações dentro do h
 
 Como essas variáveis são links para espaços na memória, dizemos que elas são um "tipo de referência" enquanto que os tipos primitivos são "um tipo de valor".
 
+NULL é explicito alguém que colocou, ou seja atribuiu ele como valor
+UNDEFINED - é quando não atribuo nada.
+
+
+Aqui é pra garantir que só vai passar se for um cliente de fato
+```javascript
+_cliente;
+
+    set cliente(novoValor) {       // aqui é do import 
+        if (novoValor instanceof Cliente) {
+            this._cliente = novoValor;
+        }
+    }
+```
+
+GETTERS E SETTERS
+
+Getters e setters são métodos em linguagens de programação orientadas a objetos que permitem o acesso e modificação controlada de atributos privados de uma classe. Getters (também chamados de métodos de acesso) retornam o valor de um atributo, enquanto setters (métodos de modificação) permitem atribuir novos valores ao atributo. 
+
+Getters:
+Permitem a leitura do valor de um atributo privado. 
+Normalmente começam com o prefixo "get" seguido do nome do atributo (ex: getNome(), getSaldo()). 
+Não modificam o valor do atributo. 
+Podem realizar validações antes de retornar o valor (ex: formatar o valor ou retornar um valor padrão). 
+
+Setters:
+Permitem a modificação do valor de um atributo privado. 
+Normalmente começam com o prefixo "set" seguido do nome do atributo (ex: setNome(), setSaldo()). 
+Podem validar o valor a ser atribuído antes de modificá-lo. 
+São importantes para garantir o encapsulamento e evitar o acesso direto aos atributos. 
+
+
+
 
 
 // pra chamar o json:

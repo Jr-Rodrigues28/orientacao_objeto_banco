@@ -1,8 +1,29 @@
+import { Cliente } from "./Cliente.js";
+
 export class contaCorrente{
     agencia;
-    cliente;
+    _cliente;
+
+    set cliente(novoValor) {       // aqui é do import 
+        if (novoValor instanceof Cliente) {
+            this._cliente = novoValor;
+        }
+    }
+
+    // Para pegar o cliente criamos um acessor
+    get cliente() {
+        return this._cliente;
+    }
+
+
+
     // #saldo = 0; é para privar
     _saldo = 0;
+
+    // Com essse acessor conseguimos pegar o valor mais não alterar 
+    get saldo() {
+        return this._saldo;
+    }
 
     // Função de saque
     sacar(valor){
