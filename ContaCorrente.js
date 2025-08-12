@@ -4,6 +4,11 @@ export class contaCorrente{
     agencia;
     _cliente;
 
+     // #saldo = 0; é para privar
+     _saldo = 0;
+
+
+    /* ----- ACESSORES ----- */
     set cliente(novoValor) {       // aqui é do import 
         if (novoValor instanceof Cliente) {
             this._cliente = novoValor;
@@ -15,16 +20,13 @@ export class contaCorrente{
         return this._cliente;
     }
 
-
-
-    // #saldo = 0; é para privar
-    _saldo = 0;
-
     // Com essse acessor conseguimos pegar o valor mais não alterar 
     get saldo() {
         return this._saldo;
     }
 
+
+    /* ----- MÉTODOS ----- */
     // Função de saque
     sacar(valor){
         if(this._saldo >= valor){
