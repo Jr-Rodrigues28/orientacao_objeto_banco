@@ -3,7 +3,7 @@ import { Cliente } from "./Cliente.js";
 export class contaCorrente{
     static numeroDeContas = 0; // Conta o número de contas correntes que tenho
     agencia;
-    _cliente;
+    _cliente;  // Atributo privado ccoloca o _
 
      // #saldo = 0; é para privar
      _saldo = 0;
