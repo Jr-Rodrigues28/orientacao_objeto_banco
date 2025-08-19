@@ -1,6 +1,7 @@
 import { Cliente } from "./Cliente.js";
 
 export class contaCorrente{
+    static numeroDeContas = 0; // Conta o número de contas correntes que tenho
     agencia;
     _cliente;
 
@@ -25,9 +26,11 @@ export class contaCorrente{
         return this._saldo;
     }
 
-    constructor(cliente, agencia) {
+    constructor(agencia, cliente) {
         this.agencia = agencia;
         this.cliente = cliente;
+        contaCorrente.numeroDeContas += 1; // Chama a conta corrente como um todo por isso não usa o this
+
     }
 
 
